@@ -17,6 +17,9 @@
     "tailwindcss": "^3.4.12"
   },
   "scripts": {
-    "dev": "tailwindcss -i ./main.css -o ./src/main.css --watch"
+    "serve": "concurrently \"postcss ./main.css -o ./src/main.css --watch\" \"live-server ./src\"",
+    "dev": "postcss ./main.css -o ./src/main.css",
+    "prod": "postcss ./main.css -o ./src/main.min.css",
+    "start": "yarn run serve" 
   }
 }

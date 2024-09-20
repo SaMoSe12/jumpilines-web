@@ -10,7 +10,10 @@
 <body class="bg-sky-300 sm:px-8 md:px-12">
     <header class="bg-zinc-100">
         <nav class="w-full h-7 sm:h-15 md:h-28 outline-dashed outline-red-600 flex justify-evenly items-center" x-data="{openHM: false}">
-            <div class="outline-dashed outline-orange-600">
+            <figure class="h-16 sm:h-20 md:h-24">
+                <img class="h-full" src="img/logoAlpha.png" alt="Jumpilines">
+            </figure>
+            <div class="outline-dashed outline-cyan-600">
                 <button>Nosotros</button>
                 <button>Brincolines</button>
                 <button>Galeria</button>
@@ -26,7 +29,30 @@
         </nav>
     </header>
     <main>
-        <section id=""></section>
+        <section id="nosotros">
+
+        </section>
+        <section id="brincolines">
+
+        </section>
+        <section id="galeria">
+
+        </section>
+        <section id="contactanos">
+
+        </section>
     </main>
+    <footer class="bg-zinc-100 mt-4 h-7 sm:h-15 md:h-20 outline-dashed outline-red-600" x-data="{}">
+        <div class="flex flex-row justify-center items-center gap-4">
+            <p class="text-sky-400 text-lg cursor-pointer" @click="">contacto@jumpilines.com</p>
+            <figure class="h-16 sm:h-20 md:h-24">
+                <img class="h-full" src="img/logoAlpha.png" alt="Jumpilines">
+            </figure>
+            <div>
+                    <span></span>
+                    <p class="text-sky-400 text-lg cursor-pointer">3222039878</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
