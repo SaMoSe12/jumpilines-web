@@ -1,24 +1,32 @@
 /** @type {import('tailwindcss').Config} */
 
-const {colors: defaultColors } = require('tailwindcss/defaultTheme')
+const { colors: defaultColors } = require('tailwindcss/defaultTheme')
+
+const colors = {
+  ...defaultColors
+}
+
 module.exports = {
   darkmode: false,
   content: [
-  	"./src/**/*.{html, js}"
+    "./src/**/*.{html, js}"
   ],
   theme: {
-  	colors:{
-  		...defaultColors
-  	}
     extend: {
-    	
+      colors: {
+        ...defaultColors,
+        "jumpilines": {
+          100: '#FFEEFF',
+          200: '#EEFFEE'
+        }
+      }
     },
   },
   plugins: [
-  	require('@tailwindcss/forms'),
-  	require('@tailwindcss/typography'),
-  	require('@tailwindcss/apect-ratio'),
-  	require('@tailwindcss/container-queries'), 
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/line-clamp'),
+    require('@tailwindcss/aspect-ratio'),
   ],
 }
 
