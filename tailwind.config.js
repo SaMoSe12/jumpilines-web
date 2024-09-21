@@ -1,10 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
-const { colors: defaultColors } = require('tailwindcss/defaultTheme')
+const { colors: defaultColors, fontFamily: fontFamily } = require('tailwindcss/defaultTheme')
 
-const colors = {
-  ...defaultColors
-}
 
 module.exports = {
   darkmode: false,
@@ -14,11 +11,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ...defaultColors,
-        "jumpilines": {
-          100: '#FFEEFF',
-          200: '#EEFFEE'
-        }
+        ...defaultColors
+      },
+      fontFamily: {
+        sans: ['Noto Sans', ...fontFamily.sans],
+        serif: [...fontFamily.serif],
+        mono: [...fontFamily.mono],
+        hand: ['Patrick Hand', ...fontFamily.sans],
+        link: ['Indie Flower', ...fontFamily.sans]
       }
     },
   },

@@ -1,58 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jumpilines</title>
     <link rel="stylesheet" href="main.css">
+    <!-- AlpineJS -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Patrick+Hand&display=swap"
+        rel="stylesheet">
 </head>
-<body class="bg-sky-300 sm:px-8 md:px-12">
-    <header class="bg-zinc-100">
-        <nav class="w-full h-7 sm:h-15 md:h-28 outline-dashed outline-red-600 flex justify-evenly items-center" x-data="{openHM: false}">
+
+<body class="bg-sky-300 sm:px-8 md:px-12" :class="openHM ? 'overflow-hidden': '' " x-data="{openHM: false}">
+    <header class="sticky top-0 z-50" :class="openHM ? 'bg-transparent' : 'bg-zinc-100'">
+        <nav
+            class="w-full min-h-7 sm:min-h-15 md:min-h-28 outline-dashed outline-red-600 flex justify-evenly items-center">
             <figure class="h-16 sm:h-20 md:h-24">
                 <img class="h-full" src="img/logoAlpha.png" alt="Jumpilines">
             </figure>
-            <div class="outline-dashed outline-cyan-600">
-                <button>Nosotros</button>
-                <button>Brincolines</button>
-                <button>Galeria</button>
-                <button>Contactanos</button>
+            <div class="sm:flex gap-3 hidden">
+                <button
+                    class="font-link px-4 bg-sky-600 rounded-lg text-xl text-neutral-100 hover:bg-sky-200 hover:text-neutral-800 transition-all duration-100 ease-linear hover:shadow-sky-800 hover:shadow-md active:bg-sky-400">
+                    Nosotros
+                </button>
+                <button
+                    class="font-link px-4 bg-purple-700 rounded-lg text-xl text-neutral-100 hover:bg-purple-400 hover:text-neutral-800 transition-all duration-100 ease-linear hover:shadow-purple-800 hover:shadow-md active:bg-purple-500">
+                    Brincolines
+                </button>
+                <button
+                    class="font-link px-4 bg-pink-700 rounded-lg text-xl text-neutral-100 hover:bg-pink-200 hover:text-neutral-800 transition-all duration-100 ease-linear hover:shadow-pink-800 hover:shadow-md active:bg-pink-300">
+                    Galeria
+                </button>
+                <button
+                    class="font-link px-4 bg-yellow-600 rounded-lg text-xl text-neutral-100 hover:bg-yellow-200 hover:text-neutral-800 transition-all duration-100 ease-linear hover:shadow-amber-600 hover:shadow-md active:bg-yellow-400">
+                    Contactanos
+                </button>
             </div>
-            <button :class="openHM ? 'opened' : ''" class="bg-transparent border-none cursor-pointer flex p-0" @click="openHM=!openHM">
+            <button :class="openHM ? 'opened bg-slate-100 rounded-full' : ''"
+                class="bg-transparent border-none cursor-pointer flex sm:hidden" @click="openHM=!openHM">
                 <svg width="50" height="50" viewBox="0 0 100 100">
-                    <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                    <path class="line line1"
+                        d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
                     <path class="line line2" d="M 20,50 H 80" />
-                    <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                    <path class="line line3"
+                        d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
                 </svg>
             </button>
         </nav>
     </header>
+    <div x-show="openHM" x-transition:enter="transition-all ease-out duration-300"
+        x-transition:enter-start="opacity-0 left-full" x-transition:enter-end="opacity-100 left-0"
+        x-transition:leave="transition-all ease-in duration-300" x-transition:leave-start="opacity-100 left-0"
+        x-transition:leave-end="opacity-0 left-full"
+        class="h-svh w-svw bg-sky-800 fixed top-0 bottom-0 left-0 right-0 flex flex-col gap-5 justify-evenly items-center">
+        <div class="w-full h-1/5 mt-20 ml-10 bg-sky-600"></div>
+        <div class="w-full h-1/5 ml-10 bg-purple-500"></div>
+        <div class="w-full h-1/5 ml-10 bg-pink-400"></div>
+        <div class="w-full h-1/5 ml-10 bg-yellow-300"></div>
+
+    </div>
     <main>
-        <section id="nosotros">
+        <section id="nosotros" class="min-h-svh left">
 
         </section>
-        <section id="brincolines">
+        <section id="brincolines" class="min-h-svh">
 
         </section>
-        <section id="galeria">
+        <section id="galeria" class="min-h-svh">
 
         </section>
-        <section id="contactanos">
+        <section id="contactanos" class="min-h-svh">
 
         </section>
     </main>
-    <footer class="bg-zinc-100 mt-4 h-7 sm:h-15 md:h-20 outline-dashed outline-red-600" x-data="{}">
+    <footer class="bg-zinc-100 mt-4 min-h-7 sm:min-h-15 md:min-h-20 outline-dashed outline-red-600" x-data="{}">
+        <div class="text-3xl text-center w-full font-hand font-semibold">Contactanos</div>
         <div class="flex flex-row justify-center items-center gap-4">
-            <p class="text-sky-400 text-lg cursor-pointer" @click="">contacto@jumpilines.com</p>
+            <p class="text-sky-400 text-lg sm:text-xl md:text-2xl cursor-pointer font-hand" @click="">
+                contacto@jumpilines.com</p>
             <figure class="h-16 sm:h-20 md:h-24">
                 <img class="h-full" src="img/logoAlpha.png" alt="Jumpilines">
             </figure>
             <div>
-                    <span></span>
-                    <p class="text-sky-400 text-lg cursor-pointer">3222039878</p>
+                <span></span>
+                <p class="text-sky-400 text-lg sm:text-xl md:text-2xl cursor-pointer font-hand">3222039878</p>
             </div>
         </div>
     </footer>
 </body>
+
 </html>
