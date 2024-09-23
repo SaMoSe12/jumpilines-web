@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -25,24 +25,32 @@
             </figure>
             <div class="sm:flex gap-3 hidden">
                 <button
-                    class="font-link px-4 bg-sky-600 rounded-lg text-xl text-neutral-100 hover:bg-sky-200 hover:text-neutral-800 transition-all duration-100 ease-linear hover:shadow-sky-800 hover:shadow-md active:bg-sky-400">
+                    class="font-link px-4 bg-sky-600 rounded-lg text-xl text-neutral-100 hover:bg-sky-200 hover:text-neutral-800 transition-all duration-100 ease-linear hover:shadow-sky-800 hover:shadow-md active:bg-sky-400"
+                    data-target="#nosotros"
+                    @click="document.querySelector($event.target.dataset.target).scrollIntoView()">
                     Nosotros
                 </button>
                 <button
-                    class="font-link px-4 bg-purple-700 rounded-lg text-xl text-neutral-100 hover:bg-purple-400 hover:text-neutral-800 transition-all duration-100 ease-linear hover:shadow-purple-800 hover:shadow-md active:bg-purple-500">
+                    class="font-link px-4 bg-purple-700 rounded-lg text-xl text-neutral-100 hover:bg-purple-400 hover:text-neutral-800 transition-all duration-100 ease-linear hover:shadow-purple-800 hover:shadow-md active:bg-purple-500"
+                    data-target="#brincolines"
+                    @click="document.querySelector($event.target.dataset.target).scrollIntoView()">
                     Brincolines
                 </button>
                 <button
-                    class="font-link px-4 bg-pink-700 rounded-lg text-xl text-neutral-100 hover:bg-pink-200 hover:text-neutral-800 transition-all duration-100 ease-linear hover:shadow-pink-800 hover:shadow-md active:bg-pink-300">
+                    class="font-link px-4 bg-pink-700 rounded-lg text-xl text-neutral-100 hover:bg-pink-200 hover:text-neutral-800 transition-all duration-100 ease-linear hover:shadow-pink-800 hover:shadow-md active:bg-pink-300"
+                    data-target="#galeria"
+                    @click="document.querySelector($event.target.dataset.target).scrollIntoView()">
                     Galeria
                 </button>
                 <button
-                    class="font-link px-4 bg-yellow-600 rounded-lg text-xl text-neutral-100 hover:bg-yellow-200 hover:text-neutral-800 transition-all duration-100 ease-linear hover:shadow-amber-600 hover:shadow-md active:bg-yellow-400">
+                    class="font-link px-4 bg-yellow-600 rounded-lg text-xl text-neutral-100 hover:bg-yellow-200 hover:text-neutral-800 transition-all duration-100 ease-linear hover:shadow-amber-600 hover:shadow-md active:bg-yellow-400"
+                    data-target="#contactanos"
+                    @click="document.querySelector($event.target.dataset.target).scrollIntoView()">
                     Contactanos
                 </button>
             </div>
-            <button :class="openHM ? 'opened bg-slate-100 rounded-full' : ''"
-                class="bg-transparent border-none cursor-pointer flex sm:hidden" @click="openHM=!openHM">
+            <button :class="openHM ? 'opened bg-slate-100' : 'bg-transparent'"
+                class="rounded-full border-none cursor-pointer flex sm:hidden" @click="openHM=!openHM">
                 <svg width="50" height="50" viewBox="0 0 100 100">
                     <path class="line line1"
                         d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
@@ -58,23 +66,43 @@
         x-transition:leave="transition-all ease-in duration-300" x-transition:leave-start="opacity-100 left-0"
         x-transition:leave-end="opacity-0 left-full"
         class="h-svh w-svw bg-sky-800 fixed top-0 bottom-0 left-0 right-0 flex flex-col gap-5 justify-evenly items-center">
-        <div class="w-full h-1/5 mt-20 ml-10 bg-sky-600"></div>
-        <div class="w-full h-1/5 ml-10 bg-purple-500"></div>
-        <div class="w-full h-1/5 ml-10 bg-pink-400"></div>
-        <div class="w-full h-1/5 ml-10 bg-yellow-300"></div>
+        <div class="group w-full h-1/5 mt-20 ml-10 bg-sky-600 flex justify-center items-center">
+            <span
+                class=" font-link text-4xl text-neutral-100 group-hover:rotate-12 group-active:rotate-12 group-focus:rotate-12 group-hover:scale-125 group-active:scale-125 group-focus:scale-125 transition-transform duration-100 ease-in-out">
+                Nosotros
+            </span>
+        </div>
+        <div class="group w-full h-1/5 ml-10 bg-violet-600 flex justify-center items-center">
+            <span
+                class="font-link text-4xl text-neutral-100 group-hover:-rotate-12 group-active:-rotate-12 group-focus:-rotate-12 group-hover:scale-125 group-active:scale-125 group-focus:scale-125 transition-transform duration-100 ease-in-out">
+                Brincolines
+            </span>
+        </div>
+        <div class="group w-full h-1/5 ml-10 bg-pink-400 flex justify-center items-center">
+            <span
+                class="font-link text-4xl  text-neutral-100 group-hover:rotate-12 group-active:rotate-12 group-focus:rotate-12 group-hover:scale-125 group-active:scale-125 group-focus:scale-125 transition-transform duration-100 ease-in-out">
+                Galeria
+            </span>
+        </div>
+        <div class="group w-full h-1/5 ml-10 bg-amber-500 flex justify-center items-center">
+            <span
+                class="font-link text-4xl  text-neutral-100 group-hover:-rotate-12 group-active:-rotate-12 group-focus:-rotate-12 group-hover:scale-125 group-active:scale-125 group-focus:scale-125 transition-transform duration-100 ease-in-out">
+                Contactanos
+            </span>
+        </div>
 
     </div>
     <main>
-        <section id="nosotros" class="min-h-svh left">
+        <section id="nosotros" class="min-h-svh left bg-cyan-400">
 
         </section>
-        <section id="brincolines" class="min-h-svh">
+        <section id="brincolines" class="min-h-svh bg-purple-300">
 
         </section>
-        <section id="galeria" class="min-h-svh">
+        <section id="galeria" class="min-h-svh bg-fuchsia-200">
 
         </section>
-        <section id="contactanos" class="min-h-svh">
+        <section id="contactanos" class="min-h-svh bg-amber-200">
 
         </section>
     </main>
