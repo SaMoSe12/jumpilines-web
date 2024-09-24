@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es" class="scroll-smooth scroll-pt-7 sm:scroll-pt-15 md:scroll-pt-28">
 
 <head>
     <meta charset="UTF-8">
@@ -17,11 +17,17 @@
 </head>
 
 <body class="bg-sky-300 sm:px-8 md:px-12" :class="openHM ? 'overflow-hidden': '' " x-data="{openHM: false}">
-    <header class="sticky top-0 z-50" :class="openHM ? 'bg-transparent' : 'bg-zinc-100'">
+    <header class="sticky top-0 z-50" :class="openHM ? 'bg-transparent' : 'bg-neutral-100'">
         <nav
-            class="w-full min-h-7 sm:min-h-15 md:min-h-28 outline-dashed outline-red-600 flex justify-evenly items-center">
+            class="w-full min-h-7 sm:min-h-15 md:min-h-28 flex justify-evenly items-center">
             <figure  class="h-16 sm:h-20 md:h-24">
-                <img data-target="#banner" class="h-full cursor-pointer" src="img/logoAlpha.png" alt="Jumpilines" @click="openHM = false; document.querySelector($event.target.dataset.target).scrollIntoView()">
+                <img 
+                    data-target="#banner" 
+                    class="h-full cursor-pointer" 
+                    src="img/logoAlpha.png" 
+                    alt="Jumpilines" 
+                    @click="openHM = false; document.querySelector($event.target.dataset.target).scrollIntoView()"
+                >
             </figure>
             <div class="sm:flex gap-3 hidden">
                 <button
@@ -97,7 +103,7 @@
         </div>
 
     </div>
-    <main>
+    <main class="">
         <section id="banner" class="min-h-svh bg-neutral-100">
 
         </section>
@@ -107,14 +113,14 @@
         <section id="brincolines" class="min-h-svh bg-purple-300">
 
         </section>
-        <section id="galeria" class="min-h-svh bg-fuchsia-200">
+        <section id="galeria" class=" min-h-svh bg-fuchsia-200">
 
         </section>
         <section id="contactanos" class="min-h-svh bg-amber-200">
 
         </section>
     </main>
-    <footer class="bg-zinc-100 mt-4 min-h-7 sm:min-h-15 md:min-h-20 outline-dashed outline-red-600" x-data="{}">
+    <footer class="bg-zinc-100 min-h-7 sm:min-h-15 md:min-h-20" x-data="{}">
         <div class="text-3xl text-center w-full font-hand font-semibold">Contactanos</div>
         <div class="flex flex-row justify-center items-center gap-4">
             <p class="text-sky-400 text-lg sm:text-xl md:text-2xl cursor-pointer font-hand" @click="">
