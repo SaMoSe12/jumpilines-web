@@ -18,7 +18,8 @@ module.exports = {
         serif: [...fontFamily.serif],
         mono: [...fontFamily.mono],
         hand: ['Patrick Hand', ...fontFamily.sans],
-        link: ['Indie Flower', ...fontFamily.sans]
+        link: ['Indie Flower', ...fontFamily.sans],
+        title: ['Atma', ...fontFamily.sans]
       }
     },
   },
