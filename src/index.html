@@ -17,20 +17,6 @@
     <link rel="shortcut icon" href="./img/JumpmenAlpha_Icon.png" type="image/png">
 </head>
 
-<<<<<<< HEAD
-<body class="bg-sky-300 sm:px-8 md:px-12" :class="openHM ? 'overflow-hidden': '' " x-data="{openHM: false}">
-    <header class="sticky top-0 z-50" :class="openHM ? 'bg-transparent' : 'bg-neutral-100'">
-        <nav
-            class="w-full min-h-7 sm:min-h-15 md:min-h-28 flex justify-evenly items-center">
-            <figure  class="h-16 sm:h-20 md:h-24">
-                <img 
-                    data-target="#banner" 
-                    class="h-full cursor-pointer" 
-                    src="img/logoAlpha.png" 
-                    alt="Jumpilines" 
-                    @click="openHM = false; document.querySelector($event.target.dataset.target).scrollIntoView()"
-                >
-=======
 <body
     class="bg-gradient-to-t from-amber-200 via-purple-400 to-sky-400 bg-cyan-200 px-0 sm:px-8 md:px-12 text-base sm:text-lg text-neutral-900 font-medium"
     :class="openHM ? 'overflow-hidden': '' " x-data="{openHM: false}">
@@ -39,7 +25,6 @@
             <figure class="h-16 sm:h-20 md:h-24">
                 <img data-target="#banner" class="h-full cursor-pointer" src="img/logoAlpha.png" alt="Jumpilines"
                     @click="openHM = false; document.querySelector($event.target.dataset.target).scrollIntoView()">
->>>>>>> fcc3141d00237db5348e45d90af8d95c6da515e6
             </figure>
             <div class="sm:flex gap-3 hidden">
                 <button
@@ -105,8 +90,8 @@
                 Galeria
             </span>
         </div>
-        <div data-target="#contactanos" class="group w-full h-1/5 ml-10 bg-amber-500 flex justify-center items-center"
-            @click="openHM = false; document.querySelector($event.target.dataset.target).scrollIntoView()">
+        <div  data-target="#contactanos" class="group w-full h-1/5 ml-10 bg-amber-500 flex justify-center items-center"
+        @click="openHM = false; document.querySelector($event.target.dataset.target).scrollIntoView()">
             <span data-target="#contactanos"
                 class="font-link text-4xl  text-neutral-100 group-hover:-rotate-12 group-active:-rotate-12 group-focus:-rotate-12 group-hover:scale-125 group-active:scale-125 group-focus:scale-125 transition-transform duration-100 ease-in-out">
                 Contactanos
@@ -114,10 +99,6 @@
         </div>
 
     </div>
-<<<<<<< HEAD
-    <main class="">
-        <section id="banner" class="min-h-svh bg-neutral-100">
-=======
     <main class="z-0">
         <section id="banner"
             class="sm:min-h-[50svh] min-h-max bg-neutral-100 bg-[url(./img/JumpmenAlpha.png)] bg-repeat bg-[length:64px_64px] bg-blend-color-dodge">
@@ -134,62 +115,21 @@
                 </div>
             </div>
         </section>
-        <section id="nosotros"
-            class="min-h-max left bg-cyan-400 bg-[url(./img/JumpmenAlpha.png)] bg-repeat bg-[length:64px_64px] bg-blend-overlay px-4 py-6">
-            <div class="min-h-1/3">
-                <h1
-                    class=" text-center font-title capitalize font-semibold text-neutral-50 text-4xl first-letter:text-5xl sm:text-[7rem] sm:first-letter:text-[7.5rem] first-letter:bg-gradient-to-tr first-letter:from-sky-800 first-letter:via-sky-500 first-letter:to-sky-900 first-letter:bg-clip-text first-letter:text-transparent">
-                    nosotros</h1>
-            </div>
-            <div class="h-full flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <figure class="sm:w-5/12">
-                    <img src="./img/AUAlpha.png" alt="Jumpilines niña sonriendo fiesta infantil">
-                </figure>
-                <div class="flex justify-normal items-center flex-col gap-4">
-                    <p>Somos una empresa nueva dedicada a brindar diversión y entretenimiento para niños y adultos con
-                        nuestros emocionantes inflables. Ofrecemos una variedad de opciones para adaptarse a diferentes
-                        ocasiones.</p>
-                    <p>Nuestros inflables están diseñados con seguridad y durabilidad en mente, garantizando
-                        horas de diversión para todos. Ya sea una fiesta de cumpleaños, un evento corporativo o
-                        simplemente un día de diversión en familia, nuestros inflables son la elección
-                        perfecta.</p>
-                    <button type="button" data-target="#contactanos"
-                        @click="document.querySelector($event.target.dataset.target).scrollIntoView()"
-                        class="bg-cyan-300 text-center text-neutral-800 rounded-md text-lg font-link font-bold transition-shadow duration-300 ease-in-out px-4 py-3 hover:shadow hover:shadow-gray-800/65 active:shadow-inner active:bg-cyan-400">
-                        ¡Alquila ahora y comienza a crear recuerdos inolvidables!
-                    </button>
-                </div>
-            </div>
-        </section>
-        <section id="brincolines"
-            class="min-h-svh bg-purple-300 bg-[url(./img/JumpmenAlpha.png)] bg-repeat bg-[length:64px_64px] bg-blend-overlay">
->>>>>>> fcc3141d00237db5348e45d90af8d95c6da515e6
+        <section id="nosotros" class="min-h-[50svh] left bg-cyan-400 bg-[url(./img/JumpmenAlpha.png)] bg-repeat bg-[length:64px_64px] bg-blend-overlay">
 
         </section>
-        <section id="galeria"
-            class="min-h-svh bg-fuchsia-200 bg-[url(./img/JumpmenAlpha.png)] bg-repeat bg-[length:64px_64px] bg-blend-overlay">
+        <section id="brincolines" class="min-h-[50svh] bg-purple-300 bg-[url(./img/JumpmenAlpha.png)] bg-repeat bg-[length:64px_64px] bg-blend-overlay">
 
         </section>
-<<<<<<< HEAD
-        <section id="brincolines" class="min-h-svh bg-purple-300">
+        <section id="galeria" 
+            class="min-h-svh bg-fuchsia-200 bg-[url(./img/JumpmenAlpha.png)] bg-repeat sm:bg-[length:64px_64px] bg-blend-overlay">
 
         </section>
-        <section id="galeria" class=" min-h-svh bg-fuchsia-200">
-
-        </section>
-        <section id="contactanos" class="min-h-svh bg-amber-200">
-
-        </section>
-    </main>
-    <footer class="bg-zinc-100 min-h-7 sm:min-h-15 md:min-h-20" x-data="{}">
-=======
-        <section id="contactanos"
-            class="min-h-svh bg-amber-200 bg-[url(./img/JumpmenAlpha.png)] bg-repeat bg-[length:64px_64px] bg-blend-overlay">
+        <section id="contactanos" class="min-h-[50svh] bg-amber-200 bg-[url(./img/JumpmenAlpha.png)] sm:bg-repeat bg-[length:64px_64px] bg-blend-overlay">
 
         </section>
     </main>
     <footer class="bg-neutral-50 mt-4 min-h-7 sm:min-h-15 md:min-h-20" x-data="{}">
->>>>>>> fcc3141d00237db5348e45d90af8d95c6da515e6
         <div class="text-3xl text-center w-full font-hand font-semibold">Contactanos</div>
         <div class="flex flex-row justify-center items-center gap-4">
             <p class="text-sky-400 text-lg sm:text-xl md:text-2xl cursor-pointer font-hand" @click="">
