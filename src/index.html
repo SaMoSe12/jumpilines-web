@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es" class="scroll-smooth scroll-pt-7 sm:scroll-pt-15 md:scroll-pt-28">
 
 <head>
     <meta charset="UTF-8">
@@ -20,8 +20,9 @@
     <header class="sticky top-0 z-50" :class="openHM ? 'bg-transparent' : 'bg-zinc-100'">
         <nav
             class="w-full min-h-7 sm:min-h-15 md:min-h-28 outline-dashed outline-red-600 flex justify-evenly items-center">
-            <figure  class="h-16 sm:h-20 md:h-24">
-                <img data-target="#banner" class="h-full cursor-pointer" src="img/logoAlpha.png" alt="Jumpilines" @click="openHM = false; document.querySelector($event.target.dataset.target).scrollIntoView()">
+            <figure class="h-16 sm:h-20 md:h-24">
+                <img data-target="#banner" class="h-full cursor-pointer" src="img/logoAlpha.png" alt="Jumpilines"
+                    @click="openHM = false; document.querySelector($event.target.dataset.target).scrollIntoView()">
             </figure>
             <div class="sm:flex gap-3 hidden">
                 <button
@@ -65,31 +66,30 @@
         x-transition:enter-start="opacity-0 left-full" x-transition:enter-end="opacity-100 left-0"
         x-transition:leave="transition-all ease-in duration-300" x-transition:leave-start="opacity-100 left-0"
         x-transition:leave-end="opacity-0 left-full"
-        class="h-svh w-svw bg-sky-800 fixed top-0 bottom-0 left-0 right-0 flex flex-col gap-5 justify-evenly items-center">
-        <div data-target="#nosotros" class="group w-full h-1/5 mt-20 ml-10 bg-sky-600 flex justify-center items-center" 
-            @click="openHM = false; document.querySelector($event.target.dataset.target).scrollIntoView()"
-        >
+        class="h-svh w-svw bg-sky-800 fixed top-0 bottom-0 left-0 right-0 flex flex-col gap-5 justify-evenly items-center z-40">
+        <div data-target="#nosotros" class="group w-full h-1/5 mt-20 ml-10 bg-sky-600 flex justify-center items-center"
+            @click="openHM = false; document.querySelector($event.target.dataset.target).scrollIntoView()">
             <span data-target="#nosotros"
                 class="font-link text-4xl text-neutral-100 group-hover:rotate-12 group-active:rotate-12 group-focus:rotate-12 group-hover:scale-125 group-active:scale-125 group-focus:scale-125 transition-transform duration-100 ease-in-out">
                 Nosotros
             </span>
         </div>
-        <div  data-target="#brincolines" class="group w-full h-1/5 ml-10 bg-violet-600 flex justify-center items-center"
-        @click="openHM = false; document.querySelector($event.target.dataset.target).scrollIntoView()">
+        <div data-target="#brincolines" class="group w-full h-1/5 ml-10 bg-violet-600 flex justify-center items-center"
+            @click="openHM = false; document.querySelector($event.target.dataset.target).scrollIntoView()">
             <span data-target="#brincolines"
                 class="font-link text-4xl text-neutral-100 group-hover:-rotate-12 group-active:-rotate-12 group-focus:-rotate-12 group-hover:scale-125 group-active:scale-125 group-focus:scale-125 transition-transform duration-100 ease-in-out">
                 Brincolines
             </span>
         </div>
-        <div  data-target="#galeria" class="group w-full h-1/5 ml-10 bg-pink-400 flex justify-center items-center"
-        @click="openHM = false; document.querySelector($event.target.dataset.target).scrollIntoView()">
+        <div data-target="#galeria" class="group w-full h-1/5 ml-10 bg-pink-400 flex justify-center items-center"
+            @click="openHM = false; document.querySelector($event.target.dataset.target).scrollIntoView()">
             <span data-target="#galeria"
                 class="font-link text-4xl  text-neutral-100 group-hover:rotate-12 group-active:rotate-12 group-focus:rotate-12 group-hover:scale-125 group-active:scale-125 group-focus:scale-125 transition-transform duration-100 ease-in-out">
                 Galeria
             </span>
         </div>
-        <div  data-target="#contactanos" class="group w-full h-1/5 ml-10 bg-amber-500 flex justify-center items-center"
-        @click="openHM = false; document.querySelector($event.target.dataset.target).scrollIntoView()">
+        <div data-target="#contactanos" class="group w-full h-1/5 ml-10 bg-amber-500 flex justify-center items-center"
+            @click="openHM = false; document.querySelector($event.target.dataset.target).scrollIntoView()">
             <span data-target="#contactanos"
                 class="font-link text-4xl  text-neutral-100 group-hover:-rotate-12 group-active:-rotate-12 group-focus:-rotate-12 group-hover:scale-125 group-active:scale-125 group-focus:scale-125 transition-transform duration-100 ease-in-out">
                 Contactanos
@@ -97,9 +97,13 @@
         </div>
 
     </div>
-    <main>
+    <main class="z-0">
         <section id="banner" class="min-h-svh bg-neutral-100">
-
+            <div class="h-full w-full relative">
+                <figure class="absolute top-1/2 left-1/2 -translate-x-1/2">
+                    <img class="w-60 h-auto" src="./img/BannerImg.png" alt="Jumpilines brincolin con niños">
+                </figure>
+            </div>
         </section>
         <section id="nosotros" class="min-h-svh left bg-cyan-400">
 
