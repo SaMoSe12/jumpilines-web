@@ -800,6 +800,9 @@ select {
 .min-h-7 {
   min-height: 1.75rem;
 }
+.min-h-\[50svh\] {
+  min-height: 50svh;
+}
 .min-h-max {
   min-height: -moz-max-content;
   min-height: max-content;
@@ -946,6 +949,18 @@ select {
 .bg-yellow-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(202 138 4 / var(--tw-bg-opacity));
+}
+.bg-emerald-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(110 231 183 / var(--tw-bg-opacity));
+}
+.bg-emerald-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(16 185 129 / var(--tw-bg-opacity));
+}
+.bg-emerald-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(167 243 208 / var(--tw-bg-opacity));
 }
 .bg-\[url\(\.\/img\/JumpmenAlpha\.png\)\] {
   background-image: url(./img/JumpmenAlpha.png);
@@ -1166,6 +1181,12 @@ select {
 }
 
 
+.hover\:bg-emerald-200:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(167 243 208 / var(--tw-bg-opacity));
+}
+
+
 .hover\:text-neutral-800:hover {
   --tw-text-opacity: 1;
   color: rgb(38 38 38 / var(--tw-text-opacity));
@@ -1216,6 +1237,12 @@ select {
 }
 
 
+.hover\:shadow-green-600:hover {
+  --tw-shadow-color: #16a34a;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+
 .active\:bg-cyan-400:active {
   --tw-bg-opacity: 1;
   background-color: rgb(34 211 238 / var(--tw-bg-opacity));
@@ -1243,6 +1270,12 @@ select {
 .active\:bg-yellow-400:active {
   --tw-bg-opacity: 1;
   background-color: rgb(250 204 21 / var(--tw-bg-opacity));
+}
+
+
+.active\:bg-emerald-400:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(52 211 153 / var(--tw-bg-opacity));
 }
 
 
@@ -1362,6 +1395,14 @@ select {
     flex-direction: row-reverse;
   }
 
+  .sm\:bg-\[length\:64px_64px\] {
+    background-size: 64px 64px;
+  }
+
+  .sm\:bg-repeat {
+    background-repeat: repeat;
+  }
+
   .sm\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -1399,10 +1440,6 @@ select {
 
   .md\:min-h-28 {
     min-height: 7rem;
-  }
-
-  .md\:scroll-pt-24 {
-    scroll-padding-top: 6rem;
   }
 
   .md\:scroll-pt-28 {

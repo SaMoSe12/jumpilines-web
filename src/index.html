@@ -46,6 +46,12 @@
                     Galeria
                 </button>
                 <button
+                    class="font-link px-4 bg-emerald-300 rounded-lg text-xl text-neutral-100 hover:bg-emerald-200 hover:text-neutral-800 transition-all duration-100 ease-linear hover:shadow-green-600 hover:shadow-md active:bg-emerald-400"
+                    data-target="#faqs"
+                    @click="document.querySelector($event.target.dataset.target).scrollIntoView()">
+                    Preguntas frecuentes
+                </button>
+                <button
                     class="font-link px-4 bg-yellow-600 rounded-lg text-xl text-neutral-100 hover:bg-yellow-200 hover:text-neutral-800 transition-all duration-100 ease-linear hover:shadow-amber-600 hover:shadow-md active:bg-yellow-400"
                     data-target="#contactanos"
                     @click="document.querySelector($event.target.dataset.target).scrollIntoView()">
@@ -90,6 +96,13 @@
                 Galeria
             </span>
         </div>
+        <div  data-target="#contactanos" class="group w-full h-1/5 ml-10 bg-emerald-500 flex justify-center items-center"
+        @click="openHM = false; document.querySelector($event.target.dataset.target).scrollIntoView()">
+            <span data-target="#contactanos"
+                class="font-link text-4xl  text-neutral-100 group-hover:-rotate-12 group-active:-rotate-12 group-focus:-rotate-12 group-hover:scale-125 group-active:scale-125 group-focus:scale-125 transition-transform duration-100 ease-in-out">
+                Preguntas Frecuentes
+            </span>
+        </div>
         <div  data-target="#contactanos" class="group w-full h-1/5 ml-10 bg-amber-500 flex justify-center items-center"
         @click="openHM = false; document.querySelector($event.target.dataset.target).scrollIntoView()">
             <span data-target="#contactanos"
@@ -115,14 +128,41 @@
                 </div>
             </div>
         </section>
-        <section id="nosotros" class="min-h-[50svh] left bg-cyan-400 bg-[url(./img/JumpmenAlpha.png)] bg-repeat bg-[length:64px_64px] bg-blend-overlay">
-
+        <section id="nosotros"
+            class="min-h-max left bg-cyan-400 bg-[url(./img/JumpmenAlpha.png)] bg-repeat bg-[length:64px_64px] bg-blend-overlay px-4 py-6">
+            <div class="min-h-1/3">
+                <h1
+                    class="text-center font-title capitalize font-semibold text-neutral-50 text-4xl first-letter:text-5xl sm:text-[7rem] sm:first-letter:text-[7.5rem] first-letter:bg-gradient-to-tr first-letter:from-sky-800 first-letter:via-sky-500 first-letter:to-sky-900 first-letter:bg-clip-text first-letter:text-transparent">
+                    nosotros</h1>
+            </div>
+            <div class="h-full flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <figure class="sm:w-5/12">
+                    <img src="./img/AUAlpha.png" alt="Jumpilines niña sonriendo fiesta infantil">
+                </figure>
+                <div class="flex justify-normal items-center flex-col gap-4">
+                    <p>Somos una empresa nueva dedicada a brindar diversión y entretenimiento para niños y adultos con
+                        nuestros emocionantes inflables. Ofrecemos una amplia variedad de inflables para fiestas infantiles para adaptarse a diferentes
+                        ocasiones.</p>
+                    <p>Nuestros inflables están diseñados con seguridad y durabilidad en mente, garantizando
+                        horas de diversión para todos. Ya sea una fiesta de cumpleaños, un evento corporativo o
+                        simplemente un día de diversión en familia, con nosotros puedes rentar de juegos inflables con la elección
+                        perfecta.</p>
+                    <button type="button" data-target="#contactanos"
+                        @click="document.querySelector($event.target.dataset.target).scrollIntoView()"
+                        class="bg-cyan-300 text-center text-neutral-800 rounded-md text-lg font-link font-bold transition-shadow duration-300 ease-in-out px-4 py-3 hover:shadow hover:shadow-gray-800/65 active:shadow-inner active:bg-cyan-400">
+                        ¡Alquila ahora!
+                    </button>
+                </div>
+            </div>
         </section>
         <section id="brincolines" class="min-h-[50svh] bg-purple-300 bg-[url(./img/JumpmenAlpha.png)] bg-repeat bg-[length:64px_64px] bg-blend-overlay">
 
         </section>
         <section id="galeria" 
             class="min-h-svh bg-fuchsia-200 bg-[url(./img/JumpmenAlpha.png)] bg-repeat sm:bg-[length:64px_64px] bg-blend-overlay">
+
+        </section>
+        <section id="faqs" class="min-h-[50svh] bg-emerald-200 bg-[url(./img/JumpmenAlpha.png)] sm:bg-repeat bg-[length:64px_64px] bg-blend-overlay">
 
         </section>
         <section id="contactanos" class="min-h-[50svh] bg-amber-200 bg-[url(./img/JumpmenAlpha.png)] sm:bg-repeat bg-[length:64px_64px] bg-blend-overlay">
