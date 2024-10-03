@@ -751,23 +751,23 @@ select {
 .left-0 {
   left: 0px;
 }
+.left-3 {
+  left: 0.75rem;
+}
 .left-full {
   left: 100%;
 }
 .right-0 {
   right: 0px;
 }
+.right-3 {
+  right: 0.75rem;
+}
 .top-0 {
   top: 0px;
 }
 .top-1\/2 {
   top: 50%;
-}
-.left-3 {
-  left: 0.75rem;
-}
-.right-3 {
-  right: 0.75rem;
 }
 .z-0 {
   z-index: 0;
@@ -805,8 +805,8 @@ select {
 .h-16 {
   height: 4rem;
 }
-.h-3 {
-  height: 0.75rem;
+.h-6 {
+  height: 1.5rem;
 }
 .h-auto {
   height: auto;
@@ -821,9 +821,6 @@ select {
 .h-svh {
   height: 100svh;
 }
-.h-6 {
-  height: 1.5rem;
-}
 .min-h-7 {
   min-height: 1.75rem;
 }
@@ -837,8 +834,8 @@ select {
 .min-h-svh {
   min-height: 100svh;
 }
-.w-3 {
-  width: 0.75rem;
+.w-6 {
+  width: 1.5rem;
 }
 .w-60 {
   width: 15rem;
@@ -849,11 +846,14 @@ select {
 .w-svw {
   width: 100svw;
 }
-.w-6 {
-  width: 1.5rem;
+.w-1\/2 {
+  width: 50%;
 }
 .max-w-full {
   max-width: 100%;
+}
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .cursor-pointer {
   cursor: pointer;
@@ -913,6 +913,9 @@ select {
 }
 .overflow-hidden {
   overflow: hidden;
+}
+.overflow-y-hidden {
+  overflow-y: hidden;
 }
 .scroll-smooth {
   scroll-behavior: smooth;
@@ -977,8 +980,8 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(250 250 250 / var(--tw-bg-opacity));
 }
-.bg-neutral-50\/85 {
-  background-color: rgb(250 250 250 / 0.85);
+.bg-neutral-50\/35 {
+  background-color: rgb(250 250 250 / 0.35);
 }
 .bg-pink-400 {
   --tw-bg-opacity: 1;
@@ -1019,9 +1022,6 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(202 138 4 / var(--tw-bg-opacity));
 }
-.bg-neutral-50\/35 {
-  background-color: rgb(250 250 250 / 0.35);
-}
 .bg-\[url\(\.\/img\/JumpmenAlpha\.png\)\] {
   background-image: url(./img/JumpmenAlpha.png);
 }
@@ -1060,6 +1060,9 @@ select {
 }
 .bg-repeat {
   background-repeat: repeat;
+}
+.fill-neutral-950 {
+  fill: #0a0a0a;
 }
 .stroke-slate-900 {
   stroke: #0f172a;
@@ -1494,6 +1497,10 @@ select {
     width: 41.666667%;
   }
 
+  .sm\:w-8 {
+    width: 2rem;
+  }
+
   .sm\:w-96 {
     width: 24rem;
   }
@@ -1505,10 +1512,6 @@ select {
   .sm\:w-fit {
     width: -moz-fit-content;
     width: fit-content;
-  }
-
-  .sm\:w-8 {
-    width: 2rem;
   }
 
   .sm\:max-w-max {

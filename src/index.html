@@ -47,8 +47,7 @@
                 </button>
                 <button
                     class="font-link px-4 bg-emerald-300 rounded-lg text-xl text-neutral-100 hover:bg-emerald-200 hover:text-neutral-800 transition-all duration-100 ease-linear hover:shadow-green-600 hover:shadow-md active:bg-emerald-400"
-                    data-target="#faqs"
-                    @click="document.querySelector($event.target.dataset.target).scrollIntoView()">
+                    data-target="#faqs" @click="document.querySelector($event.target.dataset.target).scrollIntoView()">
                     Preguntas frecuentes
                 </button>
                 <button
@@ -96,15 +95,15 @@
                 Galeria
             </span>
         </div>
-        <div  data-target="#contactanos" class="group w-full h-1/5 ml-10 bg-emerald-500 flex justify-center items-center"
-        @click="openHM = false; document.querySelector($event.target.dataset.target).scrollIntoView()">
+        <div data-target="#contactanos" class="group w-full h-1/5 ml-10 bg-emerald-500 flex justify-center items-center"
+            @click="openHM = false; document.querySelector($event.target.dataset.target).scrollIntoView()">
             <span data-target="#contactanos"
                 class="font-link text-4xl  text-neutral-100 group-hover:-rotate-12 group-active:-rotate-12 group-focus:-rotate-12 group-hover:scale-125 group-active:scale-125 group-focus:scale-125 transition-transform duration-100 ease-in-out">
                 Preguntas Frecuentes
             </span>
         </div>
-        <div  data-target="#contactanos" class="group w-full h-1/5 ml-10 bg-amber-500 flex justify-center items-center"
-        @click="openHM = false; document.querySelector($event.target.dataset.target).scrollIntoView()">
+        <div data-target="#contactanos" class="group w-full h-1/5 ml-10 bg-amber-500 flex justify-center items-center"
+            @click="openHM = false; document.querySelector($event.target.dataset.target).scrollIntoView()">
             <span data-target="#contactanos"
                 class="font-link text-4xl  text-neutral-100 group-hover:-rotate-12 group-active:-rotate-12 group-focus:-rotate-12 group-hover:scale-125 group-active:scale-125 group-focus:scale-125 transition-transform duration-100 ease-in-out">
                 Contactanos
@@ -141,11 +140,13 @@
                 </figure>
                 <div class="flex justify-normal items-center flex-col gap-4">
                     <p>Somos una empresa nueva dedicada a brindar diversión y entretenimiento para niños y adultos con
-                        nuestros emocionantes inflables. Ofrecemos una amplia variedad de inflables para fiestas infantiles para adaptarse a diferentes
+                        nuestros emocionantes inflables. Ofrecemos una amplia variedad de inflables para fiestas
+                        infantiles para adaptarse a diferentes
                         ocasiones.</p>
                     <p>Nuestros inflables están diseñados con seguridad y durabilidad en mente, garantizando
                         horas de diversión para todos. Ya sea una fiesta de cumpleaños, un evento corporativo o
-                        simplemente un día de diversión en familia, con nosotros puedes rentar de juegos inflables con la elección
+                        simplemente un día de diversión en familia, con nosotros puedes rentar de juegos inflables con
+                        la elección
                         perfecta.</p>
                     <button type="button" data-target="#contactanos"
                         @click="document.querySelector($event.target.dataset.target).scrollIntoView()"
@@ -155,55 +156,104 @@
                 </div>
             </div>
         </section>
-        <section id="brincolines" class="min-h-[50svh] bg-purple-300 bg-[url(./img/JumpmenAlpha.png)] bg-repeat bg-[length:64px_64px] bg-blend-overlay py-6 px-3 sm:px-6">
+        <section id="brincolines"
+            class="min-h-[50svh] bg-purple-300 bg-[url(./img/JumpmenAlpha.png)] bg-repeat bg-[length:64px_64px] bg-blend-overlay py-6 px-3 sm:px-6">
             <div class="flex flex-row">
-                <div class="flex flex-col sm:flex-row gap-10">
-                    <figure class="relative group" x-data="{images: ['BAlpha.png', 'B1.png', 'B2.png', 'B4.png', 'B5.png']}">
-                        <span class="w-6 h-6 sm:w-8 sm:h-8 absolute z-10 top-1/2 left-3 bg-neutral-50/35 rounded-full group-hover:bg-neutral-50/85">
-                            <svg width="24" height="24" viewBox="0 0 100 100">
-                                <!-- FINISH THIS SHIT -->
-                                <path 
-                                d="M136 90C150.384 112.919 266.871 185.871 263.166 204.626C261.326 213.931 242.049 227.382 237.725 230.837C217.044 247.361 153.451 296.996 136 310.245" 
-                                class="stroke-slate-900 stroke-2"
-                                stroke-linecap="round" 
-                                stroke-linejoin="round"/>
+                <div class="flex flex-col sm:flex-row gap-10 justify-center items-center">
+                    <figure class="relative group h-full w-1/2 select-none overflow-y-hidden"
+                        x-data="{images: ['BAlpha.png', 'B1.png', 'B2.png', 'B4.png', 'B5.png'],  current: 0}">
+                        <span
+                            class="w-6 h-6 sm:w-8 sm:h-8 absolute z-10 top-1/2 left-3 bg-neutral-50/35 rounded-full group-hover:bg-neutral-50/85 flex justify-center items-center overflow-hidden cursor-pointer"
+                            @click="current < 0||current%5 == 0 ? current = 4: ''; current-=1">
+                            <svg class="h-6 w-6" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 185.34 185.34"
+                                xml:space="preserve" fill="#000000" stroke="#000000" stroke-width="0.00185343"
+                                transform="rotate(0)matrix(-1, 0, 0, 1, 0, 0)">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke="#CCCCCC" stroke-width="0.7413719999999999"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <g>
+                                        <g>
+                                            <path class="fill-neutral-950"
+                                                d="M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175 l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934 c4.194,4.194,4.194,10.987,0,15.175l-81.934,81.939C57.201,184.293,54.454,185.343,51.707,185.343z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </g>
                             </svg>
                         </span>
-                        <img src="./img/BAlpha.png" alt="Inflable Globos" class="w-full drop-shadow-[0_0_50px_rgba(187,0,197,0.88)]">
-                        <span class="w-6 h-6  sm:w-8 sm:h-8 absolute z-10 top-1/2  right-3 bg-neutral-50/35 rounded-full group-hover:bg-neutral-50/85"></span>
+                        <img x-bind:src="'./img/'+images[current]" alt="Inflable Globos"
+                            class="w-full drop-shadow-[0_0_50px_rgba(187,0,197,0.88)] select-none">
+                        <span
+                            class="w-6 h-6  sm:w-8 sm:h-8 absolute z-10 top-1/2  right-3 bg-neutral-50/35 rounded-full group-hover:bg-neutral-50/85 flex justify-center items-center overflow-hidden cursor-pointer"
+                            @click="current+=1;current%5 == 0 ? current = 0: ''">
+
+                            <svg class="w-6 h-6" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 185.34 185.34"
+                                xml:space="preserve" fill="#000000" stroke="#000000" stroke-width="0.00185343"
+                                transform="rotate(0)matrix(1, 0, 0, 1, 0, 0)">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0">
+
+                                </g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke="#CCCCCC" stroke-width="0.7413719999999999">
+                                </g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <g>
+                                        <g>
+                                            <path class="fill-neutral-950"
+                                                d="M51.707,185.343c-2.741,0-5.493-1.044-7.593-3.149c-4.194-4.194-4.194-10.981,0-15.175 l74.352-74.347L44.114,18.32c-4.194-4.194-4.194-10.987,0-15.175c4.194-4.194,10.987-4.194,15.18,0l81.934,81.934 c4.194,4.194,4.194,10.987,0,15.175l-81.934,81.939C57.201,184.293,54.454,185.343,51.707,185.343z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
                     </figure>
                     <div class="w-full sm:w-auto flex justify-center items-center flex-col gap-5 ml-5">
-                        <h3 class="font-title text-3xl sm:text-6xl font-bold text-transparent bg-gradient-to-br from-blue-400 to-teal-600 bg-clip-text">Balloon Party</h3>
-                        <p>Sumérgete en un mundo de color y diversión con nuestro inflable Ballon Party. Este increíble castillo inflable de 5.57 x 3 metros está lleno de 100 globos que crearán un ambiente mágico y festivo.</p>
-                        <h4 class="font-title text-2xl sm:text-4xl font-semibold text-neutral-100 bg-amber-300 px-14 rounded-full py-1">Incluye</h4>
+                        <h3
+                            class="font-title text-3xl sm:text-6xl font-bold text-transparent bg-gradient-to-br from-blue-400 to-teal-600 bg-clip-text">
+                            Balloon Party</h3>
+                        <p>Sumérgete en un mundo de color y diversión con nuestro inflable Ballon Party. Este increíble
+                            castillo inflable de 5.57 x 3 metros está lleno de 100 globos que crearán un ambiente mágico
+                            y festivo.</p>
+                        <h4
+                            class="font-title text-2xl sm:text-4xl font-semibold text-neutral-100 bg-amber-300 px-14 rounded-full py-1">
+                            Incluye</h4>
                         <ul class="list-disc list-inside">
                             <li>
-                                <span class="font-bold">3 horas de servicio:</span> ¡Diversión asegurada durante todo el evento!
+                                <span class="font-bold">3 horas de servicio:</span> ¡Diversión asegurada durante todo el
+                                evento!
                             </li>
                             <li>
-                                <span class="font-bold">Staff especializado:</span> Nuestro equipo se encargará de todo para que tú solo te preocupes por distrutar.
+                                <span class="font-bold">Staff especializado:</span> Nuestro equipo se encargará de todo
+                                para que tú solo te preocupes por distrutar.
                             </li>
                             <li>
-                                <span class="font-bold">100 Globos:</span> ¡Un mar de colores para crear recuerdos inolvidables!
+                                <span class="font-bold">100 Globos:</span> ¡Un mar de colores para crear recuerdos
+                                inolvidables!
                             </li>
                         </ul>
                         <h4 class="font-2xl font-bold">
                             ¿Que costo tiene?
                         </h4>
-                        <p>El alquiler del inflable Ballon Party por <span class="font-bold">3 horas</span> tiene un costo de <span class="font-bold">$3,500.00MXN</span>.</p>
+                        <p>El alquiler del inflable Ballon Party por <span class="font-bold">3 horas</span> tiene un
+                            costo de <span class="font-bold">$3,500.00MXN</span>.</p>
                         <span class="font-light text-sm text-slate-600 self-end">Decoración externa no incluida</span>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="galeria" 
+        <section id="galeria"
             class="min-h-svh bg-fuchsia-200 bg-[url(./img/JumpmenAlpha.png)] bg-repeat sm:bg-[length:64px_64px] bg-blend-overlay">
 
         </section>
-        <section id="faqs" class="min-h-[50svh] bg-emerald-200 bg-[url(./img/JumpmenAlpha.png)] sm:bg-repeat bg-[length:64px_64px] bg-blend-overlay">
+        <section id="faqs"
+            class="min-h-[50svh] bg-emerald-200 bg-[url(./img/JumpmenAlpha.png)] sm:bg-repeat bg-[length:64px_64px] bg-blend-overlay">
 
         </section>
-        <section id="contactanos" class="min-h-[50svh] bg-amber-200 bg-[url(./img/JumpmenAlpha.png)] sm:bg-repeat bg-[length:64px_64px] bg-blend-overlay">
+        <section id="contactanos"
+            class="min-h-[50svh] bg-amber-200 bg-[url(./img/JumpmenAlpha.png)] sm:bg-repeat bg-[length:64px_64px] bg-blend-overlay">
 
         </section>
     </main>
